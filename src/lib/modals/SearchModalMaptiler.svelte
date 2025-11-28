@@ -35,7 +35,7 @@
     }
     const mapTilerPlaceTypes =
       "joint_municipality,joint_submunicipality,municipality,municipal_district,locality,neighbourhood,place,postal_code,address,road,poi";
-    const bbox = "-73.508,41.237,-69.928,42.886"; // this sets a max extent of Massachusetts for the initial query
+    const bbox = "-83.287,42.255,-82.910,42.450"
     const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(value)}.json?key=${key}&types=${encodeURIComponent(mapTilerPlaceTypes)}&limit=10&bbox=${bbox}&country=us`;
 
     try {

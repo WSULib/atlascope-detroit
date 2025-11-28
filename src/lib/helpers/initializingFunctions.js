@@ -21,7 +21,7 @@ export async function fetchLayerData() {
     let d = await fetch(instanceVariables.historicLayersFootprintsFile)
       .then((r) => r.json())
       .then((d) => {
-        let al = topojson.feature(d, "boston-volume-extents").features;
+        let al = topojson.feature(d, "detroit-volume-extents").features;
         al.sort((a, b) => {
           return +a.properties.year - b.properties.year;
         });

@@ -5,26 +5,18 @@
     "geographicCoverage": "the Yourtown area",
     "institutionalShortName": "Leventhal Map & Education Center",
     "institutionalCredit": "A project of [Yourtown](https://example.org) and the [Leventhal Map & Education Center at the Boston Public Library](https://www.leventhalmap.org)",
-    "maxExtent": [
-        -72.1536,
-        41.5895,
-        -70.7953,
-        42.6132
-    ],
+    "maxExtent": [-83.287,42.255,-82.910,42.450],
     "defaultStartLocation": {
         "name": "Default",
-        "center": [
-            -71.07733477136398,
-            42.34962571323688
-        ],
-        "zoom": 18,
-        "overlayLayerId": "ark:/76611/al7rtfm98",
+        "center": [-82.99132347106935,42.363737398805206],
+        "zoom": 16,
+        "overlayLayerId": "sanborn03985_075",
         "baseLayerId": "maptiler-streets"
     },
-    "coverageDescriptiveList": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/coverage-list.json",
-    "historicLayersFootprintsFile": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/boston-volume-extents.topojson",
-    "footprintsDissolved": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/extents-dissolved.geojson",
-    "referenceLayers": "https://s3.us-east-2.wasabisys.com/urbanatlases/extents/reference-layers.json",
+    "coverageDescriptiveList": "https://s3.us-east-2.wasabisys.com/detroit-urbanatlases/extents/coverage-list.json",
+    "historicLayersFootprintsFile": "https://s3.us-east-2.wasabisys.com/detroit-urbanatlases/extents/detroit-volume-extents.topojson",
+    "footprintsDissolved": "https://s3.us-east-2.wasabisys.com/detroit-urbanatlases/extents/extents-dissolved.geojson",
+    "referenceLayers": "https://s3.us-east-2.wasabisys.com/detroit-urbanatlases/extents/reference-layers.json",
     "geocodeKey": "DY88zutnCSJjg1OmMrUF",
     "aboutPage": "https://www.leventhalmap.org/projects/digital-projects/atlascope/",
     "outOfBoundsMessage": {

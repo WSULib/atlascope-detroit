@@ -48,6 +48,7 @@
     });
 
     fetchLayerData().then((d) => {
+      console.log(d)
       allLayers.layers = d;
       appState.layersLoaded = true;
 
