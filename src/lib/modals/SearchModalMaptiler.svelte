@@ -37,7 +37,6 @@
       "joint_municipality,joint_submunicipality,municipality,municipal_district,locality,neighbourhood,place,postal_code,address,road,poi";
     const bbox = "-83.287,42.255,-82.910,42.450"
     const url = `https://api.maptiler.com/geocoding/${encodeURIComponent(value)}.json?key=${key}&types=${encodeURIComponent(mapTilerPlaceTypes)}&limit=10&bbox=${bbox}&country=us`;
-
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -59,7 +58,7 @@
   fetch(instanceVariables.footprintsDissolved)
     .then((d) => d.json())
     .then((d) => {
-      atlasExtentsGeometry = d.geometries[0];
+      atlasExtentsGeometry = d.geometries;
     });
 
   function handleSelection(result) {

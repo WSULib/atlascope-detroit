@@ -222,11 +222,12 @@
     map.removeLayer(annotationDrawerLayer);
   }
 
-  function cancelAnnotation() {
-    map.addInteraction(annotationDrawer);
-    mapState.annotationEntry = false;
-    annotationDrawerGeometrySource.clear();
-  }
+  // function cancelAnnotation() {
+  //   map.addInteraction(annotationDrawer);
+  //   mapState.annotationEntry = false;
+  //   annotationDrawerGeometrySource.clear();
+  //   console.log("cleared")
+  // }
 
   function loadAnnotations() {
     loadedAnnotationsList = [];
@@ -311,7 +312,7 @@
         olLayers.overlay.setOpacity(opacitySliderValue / 100);
       } else {
         olLayers.overlay.setOpacity(1);
-        const ctx = event.context;
+        const ctx = /** @type {CanvasRenderingContext2D} */ (event.context);
 
         ctx.save();
         ctx.beginPath();
@@ -366,7 +367,7 @@
 
     // after rendering the layer, restore the canvas context
     olLayers.overlay.on("postrender", function (event) {
-      var ctx = event.context;
+      let ctx = /** @type {CanvasRenderingContext2D} */ (event.context);
       ctx.restore();
     });
 
@@ -536,7 +537,6 @@
       pos={annotationEntryCoords}
       featureExtent={annotationExtentCoords}
       layerID={mapState.layers.overlay.id}
-      on:cancel={cancelAnnotation}
     />
   {/if}
 
@@ -548,7 +548,7 @@
     />
   {/if}
 
-  {#if !mapState.annotationMode && loadedAnnotationsList.length === 0 && !appState.tour.active}
+  {#if loadedAnnotationsList.length === 0 && !appState.tour.active}
     <MapControls />
   {/if}
 </section>
